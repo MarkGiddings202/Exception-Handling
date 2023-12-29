@@ -10,3 +10,22 @@
        or the user Object)? Also, add any appropriate logging 
        you feel makes sense.
 */
+
+const user = {
+  name: "Misha",
+  age: 22,
+  settings: { colour: "blue" },
+};
+
+console.log("Creating user...");
+
+try {
+  console.log(user.profile.colour);
+  throw new Error("User profile, not in object")
+} catch (e) {
+    console.error(e)
+    user.profile = {colour:"blue"}
+    console.log(`The user color is now ${user.profile.colour}`)
+}
+
+console.log("User Created");
