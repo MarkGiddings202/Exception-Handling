@@ -4,5 +4,36 @@
     3. On loop number 5, throw an Error Object with the message "Boom!"
     
     4. Catch the error and console.error the loop number
-    5. Make sure the loop goes all the way to 10
+*/
+
+let i;
+try {
+  for (i = 1; i <= 10; i++) {
+    // console.log(i);
+
+    console.log(i);
+    if (i == 5) {
+      throw new Error("Boom!");
+    }
+  }
+} catch (e) {
+  console.error(e);
+  console.error(`error on log #${i}`);
+}
+
+/*
+bad scope
+for (let i = 1; i <= 10; i++) {
+  // console.log(i);
+  try {
+    console.log(i)
+    if (i == 5) {
+      throw new Error("Boom!");
+    }
+  } catch (e) {
+    console.error(e)
+    console.error(`error on log #${i}`)
+  }
+}
+
 */
